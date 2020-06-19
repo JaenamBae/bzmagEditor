@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PropertyWidget</class>
+ <widget class="QDockWidget" name="PropertyWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DockWidget</string>
+  </property>
+  <widget class="QWidget" name="widget_property">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLineEdit" name="line_path"/>
+    </item>
+    <item>
+     <widget class="QTreeWidget" name="treewidget_prop">
+      <column>
+       <property name="text">
+        <string>항목</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>값</string>
+       </property>
+      </column>
+      <item>
+       <property name="text">
+        <string>Node</string>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

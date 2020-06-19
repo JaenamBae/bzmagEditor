@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0">
+    <property name="spacing">
+     <number>2</number>
+    </property>
+    <property name="sizeConstraint">
+     <enum>QLayout::SetMinAndMaxSize</enum>
+    </property>
+    <property name="leftMargin">
+     <number>2</number>
+    </property>
+    <property name="topMargin">
+     <number>2</number>
+    </property>
+    <property name="rightMargin">
+     <number>2</number>
+    </property>
+    <property name="bottomMargin">
+     <number>2</number>
+    </property>
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="bzTreeWidget" name="treewidget_node">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>250</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::SingleSelection</enum>
+       </property>
+       <property name="headerHidden">
+        <bool>true</bool>
+       </property>
+       <property name="columnCount">
+        <number>1</number>
+       </property>
+       <column>
+        <property name="text">
+         <string notr="true">Geometry Tree</string>
+        </property>
+       </column>
+       <item>
+        <property name="text">
+         <string>첫항목</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>둘째항목</string>
+         </property>
+        </item>
+       </item>
+      </widget>
+      <widget class="QGraphicsView" name="graphics_view">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_file">
+    <property name="title">
+     <string>파일(&amp;F)</string>
+    </property>
+    <addaction name="actionOpen_O"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave_S"/>
+    <addaction name="actionSave_as_A"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit_E"/>
+   </widget>
+   <widget class="QMenu" name="menu_help">
+    <property name="title">
+     <string>도움말(&amp;H)</string>
+    </property>
+   </widget>
+   <addaction name="menu_file"/>
+   <addaction name="menu_help"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QDockWidget" name="dockwidget_output">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>524287</width>
+     <height>150</height>
+    </size>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::BottomDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>출력</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="widget_output">
+    <layout class="QGridLayout" name="gridLayout_console">
+     <property name="leftMargin">
+      <number>2</number>
+     </property>
+     <property name="topMargin">
+      <number>2</number>
+     </property>
+     <property name="rightMargin">
+      <number>2</number>
+     </property>
+     <property name="bottomMargin">
+      <number>2</number>
+     </property>
+     <property name="spacing">
+      <number>2</number>
+     </property>
+     <item row="0" column="1" rowspan="2">
+      <widget class="QPushButton" name="pushButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>확인</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" rowspan="2">
+      <widget class="QListWidget" name="listwidget_ouput">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockwidget_property">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>135</width>
+     <height>89</height>
+    </size>
+   </property>
+   <property name="features">
+    <set>QDockWidget::DockWidgetFeatureMask</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>속성</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="widget_property">
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMinAndMaxSize</enum>
+     </property>
+     <property name="leftMargin">
+      <number>2</number>
+     </property>
+     <property name="topMargin">
+      <number>2</number>
+     </property>
+     <property name="rightMargin">
+      <number>2</number>
+     </property>
+     <property name="bottomMargin">
+      <number>2</number>
+     </property>
+     <property name="spacing">
+      <number>2</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QTreeWidget" name="treewidget_prop">
+       <column>
+        <property name="text">
+         <string>항목</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>값</string>
+        </property>
+       </column>
+       <item>
+        <property name="text">
+         <string>Node</string>
+        </property>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionOpen_O">
+   <property name="text">
+    <string>열기 (&amp;O)</string>
+   </property>
+   <property name="toolTip">
+    <string>열기 (O)</string>
+   </property>
+  </action>
+  <action name="actionSave_S">
+   <property name="text">
+    <string>저장 (&amp;S)</string>
+   </property>
+  </action>
+  <action name="actionSave_as_A">
+   <property name="text">
+    <string>다른 이름으로 저장... (&amp;A)</string>
+   </property>
+  </action>
+  <action name="actionExit_E">
+   <property name="text">
+    <string>끝내기(&amp;Q)</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>bzTreeWidget</class>
+   <extends>QTreeWidget</extends>
+   <header>bztreewidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
